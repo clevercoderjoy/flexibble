@@ -1,5 +1,7 @@
-import type { Metadata } from 'next'
-import './index.css'
+import type { Metadata } from 'next';
+import './index.css';
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: 'Flexibble',
@@ -12,7 +14,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <main>
+          {children}
+        </main>
+        <footer />
+      </body>
     </html>
   )
 }
